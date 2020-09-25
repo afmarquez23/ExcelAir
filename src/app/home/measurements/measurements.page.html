@@ -1,0 +1,158 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Measurements</ion-title>
+    <ion-buttons slot="primary">
+        <ion-button (click)="home()">
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-card (click)="reload()">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-row>
+              <ion-col>
+                <div class="lowerFont2"><b>Temperature 1</b><br /></div>
+                <p></p>
+                <div text-center>{{variables[2]}} F
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <ion-row>
+              <ion-col>
+                <div class="lowerFont2"><b>Temperature 2</b><br /></div>
+                <p></p>
+                <div text-center>{{variables[3]}} F
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <ion-row>
+              <ion-col>
+                <div class="lowerFont2"><b>Humidity 1</b><br /></div>
+                <p></p>
+                <div text-center>{{variables[6]}} %
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <ion-row>
+              <ion-col>
+                <div class="lowerFont2"><b>Humidity 2</b><br /></div>
+                <p></p>
+                <div text-center>{{variables[7]}} %
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <ion-row>
+              <ion-col>
+                <div class="lowerFont2"><b>Pressure 1</b><br /></div>
+                <p></p>
+                <div text-center>{{variables[4]}} psi
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <ion-row>
+              <ion-col>
+                <div class="lowerFont2"><b>Pressure 2</b><br /></div>
+                <p></p>
+                <div text-center>{{variables[5]}} psi
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <ion-row>
+              <ion-col>
+                <div class="lowerFont2"><b>Voltage</b><br /></div>
+                <p></p>
+                <div text-center>{{variables[0]}} V
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <ion-row>
+              <ion-col>
+                <div class="lowerFont2"><b>Current</b><br /></div>
+                <p></p>
+                <div text-center>{{variables[1]}} A
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+
+</ion-content>

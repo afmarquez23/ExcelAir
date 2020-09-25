@@ -1,0 +1,197 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>EXCELAIR BLE App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title class="lowerFont">Ver 0.0.2<br />EXCELAIR<br />
+      HVAC MONITOR<br />UNIT X</ion-card-title>
+
+  </ion-card-header>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title class="lowerFont">
+      <ion-row>
+        <ion-col>
+          <div><b>Scan Device</b><br />
+            <br />
+          </div>
+          <div class="lowerFont2">
+            <ion-text color={{bstate}}>
+              {{blestatus}} 
+            </ion-text>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div float-right>
+            <ion-fab-button (click)="bledevices()">
+              <ion-icon name="arrow-dropright"></ion-icon>
+            </ion-fab-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title class="lowerFont">
+      <ion-row>
+        <ion-col>
+          <div><b>Wi-Fi Status</b><br />
+            <br />
+          </div>
+          <div class="lowerFont2">
+            <ion-text color={{wstate}}>
+              {{wifistatus}}
+            </ion-text>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div float-right>
+            <ion-fab-button (click)="presentAlertPrompt()">
+              <ion-icon name="arrow-dropright"></ion-icon>
+            </ion-fab-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+<ion-card>
+    <ion-card-header>
+      <ion-card-title class="lowerFont">
+        <ion-row>
+          <ion-col>
+            <div><b>Measurements</b>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div float-right (click)="measurements()">
+              <ion-fab-button>
+                <ion-icon name="arrow-dropright"></ion-icon>
+              </ion-fab-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+</ion-content>
+
+<!--
+
+<ion-toolbar>
+  <ion-title>
+
+  </ion-title>
+  <ion-button (click)="buttonList()" slot="end">
+    <ion-icon name="Bluetooth"></ion-icon>
+    <p>List</p>
+  </ion-button>
+
+</ion-toolbar>
+<ion-row>
+  <ion-col>
+    <ion-list>
+      <ion-card-content *ngFor="let element of prevArray; let i = index">
+        <ion-button expand="block" shape="round" (click)="indexx(i)" slot="end">
+          <p>{{element}}</p>
+        </ion-button>
+      </ion-card-content>
+    </ion-list>
+  </ion-col>
+</ion-row>
+
+<ion-toolbar>
+  <ion-title>
+    Excel Air BLE App
+  </ion-title>
+  <ion-button (click)="Set()" slot="end">
+    <ion-icon name="Bluetooth"></ion-icon>
+    <p>Send</p>
+  </ion-button>
+  <ion-button (click)="Get()" slot="end">
+    <ion-icon name="Bluetooth"></ion-icon>
+    <p>Scan</p>
+  </ion-button>
+
+</ion-toolbar>
+
+
+<ion-toolbar>
+  <ion-title>
+    Excel Air BLE App
+  </ion-title>
+  <ion-button (click)="Add()" slot="end">
+    <ion-icon name="add"></ion-icon>
+    <p>Add</p>
+  </ion-button>
+  <ion-button (click)="Subs()" slot="end">
+    <ion-icon name="remove"></ion-icon>
+    <p>Remove</p>
+  </ion-button>
+
+</ion-toolbar>
+<ion-toolbar>
+
+  <ion-button (click)="Subhome()" slot="end">
+    <ion-icon name="add"></ion-icon>
+    <p>Subhome</p>
+  </ion-button>
+
+
+</ion-toolbar>
+
+<ion-content padding>
+  <ion-button (click)="Scan()">
+    <ion-icon name="Bluetooth"></ion-icon>
+    <p>SCAN</p>
+  </ion-button>
+  <ion-row>
+    <ion-col>
+
+      <ion-list>
+        <ion-card-content ion-item *ngFor="let device of devices; let i = index">
+          <ion-button (click)="ident(i)" slot="end">
+            <p>{{device.name || 'Unnamed'}}<br /></p>
+            <p><br /></p>
+            <p>{{device.rssi}}</p>
+            <p>{{device.id}}</p>
+          </ion-button>
+        </ion-card-content>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-title (click)="start2()">
+    {{stat}}
+    <p>{{elapsed}}</p>
+    <p>{{fullTime}}</p>
+    <p>{{mimi}}</p>
+    <p>{{percent}}</p>
+  </ion-title>
+
+   This is a comment 
+    <p>{{device.name || 'Unnamed'}}</p>
+    (click)="start1()"
+  <circle-progress 
+  [percent]="85"
+  [radius]="100"
+  [outerStrokeWidth]="16"
+  [innerStrokeWidth]="8"
+  [outerStrokeColor]="'#78C000'"
+  [innerStrokeColor]="'#C7E596'"
+  [animation]="true"
+  [animationDuration]="300"
+></circle-progress>
+-->

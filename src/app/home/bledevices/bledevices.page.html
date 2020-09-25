@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Available devices</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="home()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      
+  <ion-card-content>
+      <ion-button (click)="Scan()" slot="end" expand="block">
+        <p>Scan new devices</p>
+      </ion-button>
+    </ion-card-content>
+
+    </ion-col>
+    
+    <ion-col>
+      
+        <ion-card-content>
+
+          </ion-card-content>
+      
+          </ion-col>
+    
+
+  </ion-row>
+
+
+  <ion-card-content ion-item *ngFor="let element of BLEdevices; let i = index">
+    <ion-button (click)="Connect(i)" slot="end" expand="block">
+      <p>{{element.name || 'Unnamed'}}</p>
+    </ion-button>
+    <p>ID: {{element.id}}</p>
+  </ion-card-content>
+</ion-content>
